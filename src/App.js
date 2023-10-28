@@ -10,7 +10,7 @@ import SignupForm from './SignupForm';
 import Home from './Home';
 import Dashboard from './Dashboard';
 import Weather from './Weather';
-import Animal from './Animal';
+import Recipe from './Recipe';
 import Country from './Country';
 import Profile from './Profile';
 import Tools from './Tools';
@@ -49,7 +49,7 @@ function App() {
                   <Route path="dashboard" element={<Dashboard />} />
                   <Route path="Weather" element={<Weather />} />
                   <Route path="Country" element={<Country />} />
-                  <Route path="Animal" element={<Animal />} />
+                  <Route path="Recipe" element={<Recipe />} />
                   <Route path="profile" element={<Profile />} />
                   <Route path="tools" element={<Tools />} />
                 </Routes>

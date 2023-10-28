@@ -13,8 +13,8 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
         <div className="sidebar">
           <Link to="/"> MDEV 1005 - Assignment 2</Link>
           <Link to="/Weather">Weather</Link>
-          <Link to="/Country">Recipes</Link>
-          <Link to="/Animal">Dad Jokes</Link>
+          <Link to="/Country">Country</Link>
+          <Link to="/Recipe">Recipe </Link>
         </div>
       </div>
       <div className="toggle-tab" onClick={toggleDrawer}>

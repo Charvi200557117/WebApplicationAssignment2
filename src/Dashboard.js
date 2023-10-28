@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { useUserContext } from "./userContext";
-import Animal from "./Animal";
+import Recipe from "./Recipe";
 import Weather from "./Weather";
 import Country from "./Country";
 import Sidebar from "./Sidebar";
@@ -27,7 +27,7 @@ function Dashboard({ isDrawerOpen, toggleDrawer }) {
         >
           <div className="dashboard-container container-fluid">
             <div className="widget-profile rounded-pill">
-              <Animal />
+              <Recipe />
             </div>
             <div className="widget-user-list rounded">
               <Weather />
