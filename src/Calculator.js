@@ -4,17 +4,21 @@ function Calculator() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
 
+  // Function to handle button clicks
   const handleButtonClick = (value) => {
     if (value === '=') {
+      // Calculate the result when '=' is clicked
       try {
         setResult(eval(input).toString());
       } catch (error) {
         setResult('Error');
       }
     } else if (value === 'C') {
+      // Clear the input and result when 'C' is clicked
       setInput('');
       setResult('');
     } else {
+      // Append the clicked value to the input
       setInput(input + value);
     }
   };
@@ -26,6 +30,7 @@ function Calculator() {
         <div className="result">{result}</div>
       </div>
       <div className="buttons">
+        {/* Buttons for digits, operators, clear, and equals */}
         <button onClick={() => handleButtonClick('7')}>7</button>
         <button onClick={() => handleButtonClick('8')}>8</button>
         <button onClick={() => handleButtonClick('9')}>9</button>

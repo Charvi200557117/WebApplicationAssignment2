@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Country() {
-  const [countryName, setCountryName] = useState('');
-  const [countryData, setCountryData] = useState(null);
+  const [countryName, setCountryName] = useState(''); // State to store the country name
+  const [countryData, setCountryData] = useState(null); // State to store the fetched country data
 
   const apiKey = 'YUDAqMYmVDC9LvcUHrlGgqQ==f2JEvV78cjfvZ40l'; // Replace with your API key
   const apiUrl = `https://api.api-ninjas.com/v1/country?name=${countryName}&key=${apiKey}`;
 
+  // Function to fetch country data from the API
   const fetchCountryData = async () => {
     try {
       const response = await axios.get(apiUrl);
@@ -24,8 +25,8 @@ function Country() {
     }
   }, [countryName]);
 
+  // Function to manually initiate the API request when the "Fetch" button is clicked
   const handleFetchClick = () => {
-    // Manually initiate the API request when the "Fetch" button is clicked
     fetchCountryData();
   };
 

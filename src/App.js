@@ -17,17 +17,19 @@ import Tools from './Tools';
 
 function App() {
   return (
-    <AuthProvider> {/* Wrap your app with AuthProvider */}
+    <AuthProvider> {/* Wrap your app with AuthProvider for authentication */}
       <Router>
+        {/* Create the top app bar for navigation */}
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6">My Firebase Auth App</Typography>
             <div style={{ marginLeft: 'auto' }}>
+              {/* Navigation links */}
               <Link to="/" style={{ color: 'inherit', textDecoration: 'none', marginRight: 20 }}>
                 Home
               </Link>
               <Link to="profile" style={{ color: 'inherit', textDecoration: 'none', marginRight: 20 }}>
-              Profile
+                Profile
               </Link>
               <Link to="login" style={{ color: 'inherit', textDecoration: 'none', marginRight: 20 }}>
                 Login
@@ -38,11 +40,13 @@ function App() {
             </div>
           </Toolbar>
         </AppBar>
+        {/* Create the main content container */}
         <Container>
           <Grid container justifyContent="center">
             <Grid item xs={12} md={6}>
               <Paper elevation={3} style={{ padding: 20, marginTop: 20 }}>
                 <Routes>
+                  {/* Define routes for your application */}
                   <Route path="/" element={<Home />} />
                   <Route path="login" element={<LoginForm />} />
                   <Route path="signup" element={<SignupForm />} />

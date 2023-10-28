@@ -4,8 +4,10 @@ import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, en
 function Calendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
 
+  // Array to store the names of days of the week
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
+  // Function to get an array of days for the current month
   const getMonthDays = () => {
     const start = startOfWeek(startOfMonth(currentDate));
     const end = endOfWeek(endOfMonth(currentDate));
@@ -20,10 +22,12 @@ function Calendar() {
     return days;
   };
 
+  // Function to go to the previous month
   const previousMonth = () => {
     setCurrentDate(subMonths(currentDate, 1));
   };
 
+  // Function to go to the next month
   const nextMonth = () => {
     setCurrentDate(addMonths(currentDate, 1));
   };
