@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 
 function Calculator() {
   const [input, setInput] = useState('');
-  const [output, setOutput] = useState('');
+  const [result, setResult] = useState('');
 
   const handleButtonClick = (value) => {
     if (value === '=') {
       try {
-        setOutput(eval(input));
+        setResult(eval(input).toString());
       } catch (error) {
-        setOutput('Error');
+        setResult('Error');
       }
     } else if (value === 'C') {
       setInput('');
-      setOutput('');
+      setResult('');
     } else {
       setInput(input + value);
     }
@@ -23,7 +23,7 @@ function Calculator() {
     <div className="calculator">
       <div className="display">
         <input type="text" value={input} readOnly />
-        <div className="result">{output}</div>
+        <div className="result">{result}</div>
       </div>
       <div className="buttons">
         <button onClick={() => handleButtonClick('7')}>7</button>
