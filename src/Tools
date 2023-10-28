@@ -1,0 +1,31 @@
+import React from "react";
+import Calculator from "./Calculator";
+import Calendar from "./Calender";
+
+function Tools() {
+  return (
+    <div className="container mt-4">
+      <div className="row">
+        <div className="col-md-4 mb-4">
+          <ToolCard title="Calculator" component={<Calculator />} />
+        </div>
+        <div className="col-md-4 mb-4">
+          <ToolCard title="Calendar" component={<Calendar />} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ToolCard({ title, component }) {
+  return (
+    <div className="card">
+      <div className="card-body d-flex flex-column align-items-center justify-content-center text-center">
+        <h5 className="card-title">{title}</h5>
+        <div>{component}</div>
+      </div>
+    </div>
+  );
+}
+
+export default Tools;
