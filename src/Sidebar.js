@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Sidebar({ isDrawerOpen, toggleDrawer }) {
   return (
     <>
+      {/* Sidebar that contains links to different pages */}
       <div className={`sidebar-drawer ${isDrawerOpen ? "open" : ""}`}>
         <ul className="sidebar" style={{ position: "absolute", left: 0, top: 60 }}>
           <li>
@@ -20,7 +21,14 @@ function Sidebar({ isDrawerOpen, toggleDrawer }) {
           </li>
         </ul>
       </div>
+
+      {/* Toggle tab for opening/closing the sidebar */}
       <div className="toggle-tab" onClick={toggleDrawer}>
+        {/* 
+          Icon to indicate the state of the sidebar (open/closed). 
+          It uses Unicode characters for the "hamburger" icon (☰).
+          Conditional rendering based on the isDrawerOpen state.
+        */}
         {/* <p>
           {!isDrawerOpen ? (
             <h2>☰</h2>

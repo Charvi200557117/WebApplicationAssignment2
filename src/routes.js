@@ -9,6 +9,7 @@ function Routes() {
   return (
     <Router>
       <div>
+        {/* Navigation links for different pages */}
         <nav>
           <ul>
             <li>
@@ -25,10 +26,19 @@ function Routes() {
             </li>
           </ul>
         </nav>
+
+        {/* Routing configuration for different pages */}
         <Switch>
+          {/* Exact path for the Dashboard page */}
           <Route exact path="/" component={Dashboard} />
+
+          {/* Route for the User Profile page */}
           <Route path="/user-profile" component={Recipe} />
+
+          {/* Route for the User List page (Weather) */}
           <Route path="/user-list" component={Weather} />
+
+          {/* Route for the Financial Information page (Country) */}
           <Route path="/financial" component={Country} />
         </Switch>
       </div>
